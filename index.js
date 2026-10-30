@@ -26,9 +26,20 @@ app.command("/lucky-help", async ({ ack, respond }) => {
   await respond({
     text:
 `Available Commands:
+/lucky-intro - Gives an Intro
 /lucky-ping - Check bot latency
 /lucky-catfact - Get a cat fact
 /lucky-joke - Tells a joke`
+
+  });
+});
+
+app.command("/lucky-intro", async ({ ack, respond }) => {
+  await ack();
+  await respond({
+    text:
+`Hii!! I am LUCKY,ItsCoolex's personal slack(not so slacking) slackbot!
+ I can do loads of fun things like tell and joke, cat facts and so much more!`
 
   });
 });
